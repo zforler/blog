@@ -1,0 +1,12 @@
+:root{
+    --bgimg: 'url(../img/b_2.jpg)';
+    --theme-color:#fff;
+
+}
+body{
+    /*background: var(--bgimg) no-repeat;*/
+    /*background-size: 100% auto;*/
+    /*background-attachment: fixed;*/
+    background-color: var(--theme-color);
+    height: 2000px;
+}
