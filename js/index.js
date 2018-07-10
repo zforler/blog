@@ -2,6 +2,9 @@ $(function(){
     setThemeColor();
 });
 
+/**
+ * 根据主题图片设置主题颜色
+ */
 function setThemeColor(){
     let src = 'img/b_2.jpg';
     let colorThief = new ColorThief();
@@ -12,7 +15,6 @@ function setThemeColor(){
     img.onload = function(){
         let color = colorThief.getColor(img);
         color = color.join(',');
-        console.log(color);
         document.body.style.setProperty('--theme-color',  `rgb(${color})`);
         document.body.style.setProperty('--bgimg',  `url(../${src})`);
     };

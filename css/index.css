@@ -1,7 +1,10 @@
 :root{
     --bgimg: 'url(../img/b_2.jpg)';
     --theme-color:#fff;
-
+}
+body:root{
+    --bgimg: 'url(../img/b_2.jpg)';
+    --theme-color:#fff;
 }
 body{
     /*background: var(--bgimg) no-repeat;*/
@@ -9,4 +12,5 @@ body{
     /*background-attachment: fixed;*/
     background-color: var(--theme-color);
     height: 2000px;
+
 }
