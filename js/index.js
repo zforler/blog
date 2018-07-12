@@ -1,4 +1,5 @@
 $(function(){
+    hljs.initHighlightingOnLoad();
     setThemeColor();
 });
 
@@ -10,16 +11,16 @@ function setThemeColor(){
     let colorThief = new ColorThief();
     let img = document.createElement('img');
     img.src = src;
-    img.width = 1000;
-    img.height = 1000;
+    img.width = 300;
+    img.height = 300;
     img.onload = function(){
         let color = colorThief.getColor(img);
         color = color.join(',');
         let colors = colorThief.getPalette(img,10,255);
         console.log(colors);
-        console.log(colorThief.getPalette(img,3,255));
-        document.body.style.setProperty('--theme-color',  `rgb(${color})`);
-        document.body.style.setProperty('--theme-color-2',  `rgb(${colors[1]})`);
+        colors.forEach((item,index)=>{
+            document.body.style.setProperty(`--theme-color-${index+1}`,  `rgb(${item.join(',')})`);
+        });
         document.body.style.setProperty('--bgimg',  `url(../${src})`);
     };
 
