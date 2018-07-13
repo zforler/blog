@@ -1,96 +1,13 @@
-:root{
-    --bgimg: '';
-    --theme-color-1:#fff;
-    --theme-color-2:#fff;
-    --theme-color-3:#fff;
-    --theme-color-4:#fff;
-    --theme-color-5:#fff;
-    --theme-color-6:#fff;
-    --theme-color-7:#fff;
-    --theme-color-8:#fff;
-    --theme-color-9:#fff;
-    --theme-color-50: rgba(255,255,255,0.5);
-}
-*{
-    font-size: 13px;
-    font-family: "Microsoft YaHei UI";
-    color:#555;
-    padding: 0;
-    margin: 0;
-}
-a:hover,a:link,a:visited{
-    text-decoration: none;
-}
-ul{
-    margin: 0;
-    list-style: none;
-}
-body{
-    background-color: var(--theme-color-1) !important;
-    background-color: #f0f0f0;
-}
-.footer-top{
-    background-color: var(--theme-color-2);
-    width: 100%;
-    height: 200px;
-}
-.footer-bottom{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.no-padding{
-    padding: 0;
-}
-.no-padding-right{
-    padding-right: 0;
-}
-.bg-theme-color-50{
-    background-color: var(--theme-color-50);
-}
-.color-999{
-    color:#999;
-}
 
 /*************************************************************************************************/
-.top-img{
-    background: var(--bgimg) no-repeat;
-    background-size: 100% 100%;
-    height: 250px;
-}
+
 .blog-gg{
     height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-/*.article-tip{*/
-    /*background-color: var(--theme-color-2);*/
-    /*position: absolute;*/
-    /*display: block;*/
-    /*padding: 0 10px;*/
-    /*height: 25px;*/
-    /*color: #fff;*/
-    /*line-height: 25px;*/
-    /*left: 5px;*/
-    /*top: 8px;*/
-    /*border-top-left-radius: 4px;*/
-/*}*/
-/*.article-tip:before{*/
-    /*content: '';*/
-    /*width: 0;*/
-    /*height: 0;*/
-    /*border: 5px solid transparent;*/
-    /*border-bottom-width: 5px;*/
-    /*border-left-width: 10px;*/
-    /*border-right-width: 0px;*/
-    /*border-bottom-color: var(--theme-color-2);*/
-    /*position: absolute;*/
-    /*top: -9px;*/
-    /*left: 0px;*/
-/*}*/
+
 .article-tip{
     background-color: var(--theme-color-2);
     position: absolute;
@@ -103,16 +20,12 @@ body{
     top: 8px;
 }
 
-.article-item,.side-item{
-    background-color: rgba(255,255,255,0.7);
+.article-item{
+    background-color:var(--theme-sq-bg);
     height: 195px;
     margin-bottom: 10px;
     padding: 20px;
 }
-
-
-
-
 .article-img {
     width: 34%;
     height: 100%;
@@ -176,106 +89,4 @@ body{
 }
 
 /********************************************************************************************/
-.side-item{
-    height: auto;
-    padding: 15px;
-}
-.side-item-1{
-    margin-bottom: 1px;
-}
-.side-bk-ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.side-bk-e {
-    padding: 5px 10px;
-    margin-right: 5px;
-    /*margin-bottom: 5px;*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.side-bk-f{
-    padding-top: 5px;
-}
 
-.side-tip{
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 15px;
-}
-.side-tip i{
-    color:var(--theme-color-3);
-    margin-right: 5px;
-    font-weight: bold;
-}
-
-.side-bk-a {
-    width: 60px;
-    height: 60px;
-}
-.side-bk-content {
-    display: flex;
-    justify-content: start;
-}
-.side-bk-c {
-    font-size: 15px;
-    font-weight: bold;
-}
-.side-bk-b {
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-}
-span.side-bk-d {
-    text-indent: 30px;
-}
-
-.side-rm-b {
-    margin-bottom: 10px;
-    color: #999;
-    font-size: 12px;
-}
-.side-gr-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-.side-gr-a {
-    padding: 5px 10px;
-    border: var(--theme-color-9) thin solid;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-    color: var(--theme-color-9);
-}
-.side-gr-a:hover{
-    font-size: 16px;
-    color:#333;
-    transition: all 0.3s;
-}
-
-.side-pl-a {
-    margin-bottom: 5px;
-}
-.side-pl-b {
-    color: #999;
-    word-break:break-all;
-    display:-webkit-box;
-    -webkit-line-clamp:2;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
-}
-.side-pl-d{
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-}
-.side-pl-d a{
-    color:#333;
-}
-.side-pl-d a:hover{
-    color:var(--theme-color-3);
-    transition: color 0.3s;
-}

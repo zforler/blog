@@ -1,0 +1,159 @@
+article{
+    background-color: var(--theme-sq-bg);
+    padding: 15px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+header{
+    border-bottom:var(--theme-color-1) thin solid;
+
+}
+.ar-tip {
+    background-color: var(--theme-color-1);
+    padding: 3px 8px;
+    color: #fff;
+}
+.ar-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.ar-time,.ar-views {
+    display: inline-block;
+    color: #999;
+}
+.ar-views {
+    float: right;
+}
+
+article img{
+    width:100%;
+}
+
+article footer{
+    border-top: var(--theme-color-1) solid thin;
+    margin-top: 25px;
+    padding: 10px 0;
+}
+.ar-op {
+    display: flex;
+    justify-content: flex-end;
+}
+.ar-op-item {
+    padding: 2px 10px;
+    border: var(--theme-color-1) thin solid;
+    margin-left: 8px;
+    border-radius: 3px;
+    color:#999;
+}
+.ar-op-i{
+    color: #999;
+}
+
+
+
+/*****************************************************↓↓↓评论↓↓↓***********************************************/
+.ar-comment {
+    background-color: var(--theme-sq-bg);
+    padding: 15px;
+    margin-bottom: 2px;
+}
+.ar-textarea {
+    resize: none;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.ar-ta-op {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 8px 0;
+}
+.ar-tt {
+    margin-right: 20px;
+}
+.ar-comment-list {
+    background-color: var(--theme-sq-bg);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.ar-commont-item {
+    border-bottom: var(--theme-color-1) thin solid;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.ar-a {
+    width: 35px;
+    height: 35px;
+}
+.ar-b {
+    font-weight: bold;
+}
+.ar-c,.ar-d {
+    color: #999;
+}
+.ar-commont-con {
+    box-sizing: border-box;
+    padding: 8px 8px 8px 40px;
+    text-indent: 2em;
+    margin-bottom: 80px;
+}
+.ar-commont-op {
+    text-align: right;
+    color: #999;
+}
+.ar-re {
+    border: none;
+    background: var(--theme-color-1-30);
+    cursor: pointer;
+    padding: 5px 10px;
+    color: inherit;
+}
+.ar-commont-com {
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.ar-commont-com-ul{
+    background-color: var(--theme-color-1-30);
+    padding: 15px;
+}
+.ar-commont-citem {
+
+}
+.ar-commont-citem-1{
+    text-align: right;
+    border-bottom: var(--theme-color-1) thin solid;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.ar-commont-citem-last {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.ar-citem-last-a,.ar-citem-last-c {
+    padding: 3px 10px;
+    background-color: #fff;
+    color: #999;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: var(--theme-color-1) thin solid;
+    border-radius: 3px;
+}
+.ar-citem-last-c{
+    margin: 0;
+}
+.ar-citem-last-b {
+    resize: none;
+    width: calc(100% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+/*****************************************************↑↑↑评论↑↑↑***********************************************/
