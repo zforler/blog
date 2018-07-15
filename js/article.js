@@ -1,4 +1,7 @@
+hljs.initHighlightingOnLoad();
 $(function(){
-    hljs.initHighlightingOnLoad();
     setThemeColor();
+
 });
+
+

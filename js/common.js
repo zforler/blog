@@ -22,7 +22,7 @@ function setThemeColor(){
         let rcolor = [255-colors[0][0],255-colors[0][1],255-colors[0][2]];
         document.body.style.setProperty('--theme-color-1-30',  `rgba(${colors[0].join(',')},0.3)`);
         document.body.style.setProperty('--theme-rcolor-1',  `rgb(${rcolor.join(',')})`);
-        document.body.style.setProperty('--bgimg',  `url(../${src})`);
+        // document.body.style.setProperty('--bgimg',  `url(../${src})`);
     };
 
 }
