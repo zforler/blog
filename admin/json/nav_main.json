@@ -1,6 +1,33 @@
 {
   "data": [
     {
+      "text": "文章管理",
+      "icon": "&#xe620;",
+      "subset": [
+        {
+        "text": "写文章",
+        "icon": "&#xe621;",
+        "href": "page/article.html"
+        },
+        {
+          "text": "文章列表",
+          "icon": "&#xe621;",
+          "href": "page/articlelist.html"
+        }
+      ]
+    },
+    {
+      "text": "评论管理",
+      "icon": "&#xe620;",
+      "subset": [
+        {
+          "text": "评论列表",
+          "icon": "&#xe621;",
+          "href": "page/commentlist.html"
+        }
+      ]
+    },
+    {
       "text": "LAYUI基础",
       "icon": "&#xe620;",
       "subset": [
@@ -44,11 +71,6 @@
       "icon": "&#xe628;",
       "href": "",
       "subset": [
-        {
-          "text": "文章",
-          "icon": "&#xe621;",
-          "href": "demo/article.html"
-        },
         {
           "text": "登录页",
           "icon": "&#xe621;",
