@@ -22,13 +22,48 @@
 
 <!-- Include the Quill library -->
 <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
-
+<script src="tool/jquery3.3.1.js"></script>
 <!-- Initialize Quill editor -->
 <script>
     var editor = new Quill('#editor', {
 //        modules: { toolbar: '#toolbar' },
         theme: 'snow'
     });
+
+
+
+    let obj = {
+        "OperatorID":'E801',
+        Data: 'VWsK+AW/vPD9Vu/5rpUHkeyENwHqOgyoLC+vcpTH48tKQkUFKPCfl68IMlwnyZqSZulnKrOMkHcGdUHXhXgKWA==',
+        TimeStamp:1,
+        Seq:1,
+        Sig:1
+    };
+    obj = {
+        "OperatorID":'jxdx001',
+        Data: 'VWsK+AW/vPD9Vu/5rpUHkVV/+5gdFH+hOuFsPDX4wbZBxm6KEVtKW8X1BuJ9BAT/PmsLfvBVD/htTGLQAlzkXw==',
+        TimeStamp:"1234",
+        Seq:"1234",
+        Sig:"9922342BF70D225056BFB704F265BCED"
+    };
+    console.log(JSON.stringify(obj))
+    $.ajax({
+        url: 'http://localhost:8080/evcs/E8/query_token',
+        type:'POST',
+        headers:{
+            "Content-Type": "application/json;charset=utf-8"
+        },
+        data:JSON.stringify(obj),
+        success:function (data) {
+            console.log(data);
+        }
+    })
+
 </script>
+
+
+
+
+
 </body>
 </html>
