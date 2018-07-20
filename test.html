@@ -46,12 +46,31 @@
         Seq:"1234",
         Sig:"9922342BF70D225056BFB704F265BCED"
     };
+    let token = 'BEARER9693fc8d637940d6b5033261404a1db3000000000166';
+    obj = {
+        OperatorID:'E801',
+        Data: 'hoG7HHKrZ+LATNmCh56ixMXm+GoMPCIN9lGt0h8Ok8hqtDUFR0xTrgVnozUF2BBM+kvrD7CBjKv8YJnj96FSew==',
+        TimeStamp:"1234",
+        Seq:"1234",
+        Sig:"A7BCF0FBAA3F073671BE743B57DA551A"
+    };
+    obj = {
+        OperatorID:'E801',
+        Data: '3HO5qDrqBPLN1wNdVhPE0F09MN+2LvGx5PFR2Rgv65K2tXNG3To9E5lf9pdT11euqrnRq/K1F2Xz1G7PLVBR2QKpwkGz8FUCjj69Jve4WdU=',
+        TimeStamp:"1234",
+        Seq:"1234",
+        Sig:"93CD4A72BF8466ACE30EAB5ADA93E9D4"
+    };
+
     console.log(JSON.stringify(obj))
     $.ajax({
-        url: 'http://localhost:8080/evcs/E8/query_token',
+        // url: 'http://localhost:8080/evcs/E8/query_token',
+        // url: 'http://localhost:8080/evcs/E8/query_stations_info',
+        url: 'http://localhost:8080/evcs/E8/query_station_stats',
         type:'POST',
         headers:{
-            "Content-Type": "application/json;charset=utf-8"
+            "Content-Type": "application/json;charset=utf-8",
+            "Authorization": token,
         },
         data:JSON.stringify(obj),
         success:function (data) {
