@@ -41,7 +41,12 @@
             <div class="col-lg-8 no-padding-right">
                     <article>
                         <header>
-                            <h3 class="ar-title"><a class="ar-tip" href="#">springMVC</a>这是文章的标题</h3>
+                            <h3 class="ar-title">
+                                这是文章的标题
+                                <a class="ar-tip" href="#">springMVC</a>
+                                <a class="ar-tip" href="#">springMVC</a>
+                                <a class="ar-tip" href="#">springMVC</a>
+                            </h3>
                             <p class="ar-time">2018年7月25日 16:23:23</p>
                             <p class="ar-views">阅读数：879</p>
                         </header>
@@ -104,7 +109,7 @@
                             <button id="ar-submit">发表评论</button>
                         </div>
                     </div>
-                    <div class="ar-comment-list">
+                    <div class="ar-comment-list" id="comment-con">
                         <div class="ar-commont-item">
                             <div class="ar-commont-top">
                                 <img class="ar-a" src="img/photo/b_1.jpg"/>
@@ -136,9 +141,9 @@
                             <div class="ar-commont-op">
                                 <span class="ar-c">2017年8月23日 16:23:33</span>
                                 <span class="ar-d">#1楼</span>
-                                <span class="ar-re">评论</span>
+                                <span class="ar-re" data-type="review" data-target="asd">评论</span>
                             </div>
-                            <div class="ar-commont-com">
+                            <div class="ar-commont-com" id="asd">
                                 <ul class="ar-commont-com-ul">
                                     <li class="ar-commont-citem">
                                         <img class="ar-a" src="img/photo/b_1.jpg"/>
@@ -147,7 +152,8 @@
                                     </li>
                                     <li class="ar-commont-citem ar-commont-citem-1">
                                         <span class="ar-c">2017年8月23日 16:23:33</span>
-                                        <span class="ar-d">回复</span>
+                                        <span class="ar-d" data-type="hf" data-target="abs"
+                                              data-textarea="abs1" data-reviewId="1">回复</span>
                                     </li>
                                     <li class="ar-commont-citem">
                                         <img class="ar-a" src="img/photo/b_1.jpg"/>
@@ -157,12 +163,17 @@
                                     </li>
                                     <li class="ar-commont-citem ar-commont-citem-1">
                                         <span class="ar-c">2017年8月23日 16:23:33</span>
-                                        <span class="ar-d">回复</span>
+                                        <span class="ar-d" data-type="hf" data-target="abs"
+                                              data-textarea="abs1" data-reviewId="1">回复</span>
                                     </li>
-                                    <li class="ar-commont-citem-last">
-                                        <span class="ar-citem-last-a">我也说一句</span>
-                                        <textarea class="ar-citem-last-b"></textarea>
-                                        <span class="ar-citem-last-c">发表</span>
+                                    <li class="ar-commont-citem-2">
+                                        <span class="ar-citem-last-a"  data-type="wysyj" data-target="abs"
+                                              data-textarea="abs1" data-commentId="1">我也说一句</span>
+                                    </li>
+                                    <li class="ar-commont-citem-last" id="abs">
+
+                                        <textarea class="ar-citem-last-b" id="abs1"></textarea>
+                                        <span class="ar-citem-last-c" data-type="fb">发表</span>
                                     </li>
                                 </ul>
                             </div>
@@ -318,6 +329,7 @@
 <script src="tool/bootstrap.min.js"></script>
 <script src="tool/color-thief.js"></script>
 <script src="js/common.js"></script>
+<script src="js/comment.js"></script>
 <script src="js/article.js"></script>
 
 </html>

@@ -26,3 +26,7 @@ function setThemeColor(){
     };
 
 }
+
+function selector(target){
+    return document.querySelector('#'+target);
+}

@@ -32,52 +32,53 @@
 
 
 
-    let obj = {
-        "OperatorID":'E801',
-        Data: 'VWsK+AW/vPD9Vu/5rpUHkeyENwHqOgyoLC+vcpTH48tKQkUFKPCfl68IMlwnyZqSZulnKrOMkHcGdUHXhXgKWA==',
-        TimeStamp:1,
-        Seq:1,
-        Sig:1
-    };
-    obj = {
-        "OperatorID":'jxdx001',
-        Data: 'VWsK+AW/vPD9Vu/5rpUHkVV/+5gdFH+hOuFsPDX4wbZBxm6KEVtKW8X1BuJ9BAT/PmsLfvBVD/htTGLQAlzkXw==',
+    let objStatus = {
+        OperatorID:'751147003',
+        Data: '+x+kfT/aLIgbNUKBRPCkuq+1gYd4eWI/Zt1tumKFoBuMqbM1za+JLzGx79DAkOM/OHitDEExEAKiH2l1c3er9VYO6scqLyJ/p0QX9boLKtA=',
         TimeStamp:"1234",
         Seq:"1234",
-        Sig:"9922342BF70D225056BFB704F265BCED"
+        Sig:"53A8699DE4940625A3A2BD9E5C57FDFA"
     };
-    let token = 'BEARER9693fc8d637940d6b5033261404a1db3000000000166';
-    obj = {
-        OperatorID:'E801',
-        Data: 'hoG7HHKrZ+LATNmCh56ixMXm+GoMPCIN9lGt0h8Ok8hqtDUFR0xTrgVnozUF2BBM+kvrD7CBjKv8YJnj96FSew==',
+    let objstats = {
+        OperatorID:'751147003',
+        Data: '+x+kfT/aLIgbNUKBRPCkuq+1gYd4eWI/Zt1tumKFoBuMqbM1za+JLzGx79DAkOM/OHitDEExEAKiH2l1c3er9VYO6scqLyJ/p0QX9boLKtA=',
         TimeStamp:"1234",
         Seq:"1234",
-        Sig:"A7BCF0FBAA3F073671BE743B57DA551A"
+        Sig:"53A8699DE4940625A3A2BD9E5C57FDFA"
     };
-    obj = {
-        OperatorID:'E801',
-        Data: '3HO5qDrqBPLN1wNdVhPE0F09MN+2LvGx5PFR2Rgv65K2tXNG3To9E5lf9pdT11euqrnRq/K1F2Xz1G7PLVBR2QKpwkGz8FUCjj69Jve4WdU=',
+    let token = 'BEARER261724c2cd7c46f8925d5f1f105fd4af000000000198';
+
+    let objInfo = {
+        OperatorID:'751147003',
+        Data: 'iD1t3QKy3xah8Mz92XWkoH8rpG9dBt+NgI0SyBcu0b2Rie6q7uIFwtKj3e314ejQawlct7sddlF50xOCXSYWvA==',
         TimeStamp:"1234",
         Seq:"1234",
-        Sig:"93CD4A72BF8466ACE30EAB5ADA93E9D4"
+        Sig:"8BE655C55FCAA443C64653E90781B4FF"
+    };
+    let objToken = {
+        OperatorID:'751147003',
+        Data: '9QGC+OMIgFapZpI9IgqXlXoR28I0+6o7LCeKBBkK9Mfo1etinjSuvmFelleFFt4qRWvSlHL5eOp99fNoyvBTyA==',
+        TimeStamp:"1234",
+        Seq:"1234",
+        Sig:"C586E2B9E04872B72C938E76FF3A0BF8"
     };
 
-    console.log(JSON.stringify(obj))
     $.ajax({
-        // url: 'http://localhost:8080/evcs/E8/query_token',
-        // url: 'http://localhost:8080/evcs/E8/query_stations_info',
-        url: 'http://localhost:8080/evcs/E8/query_station_stats',
+        // url: 'https://www.hcharger.com/evcs/E8/query_token',
+        // url: 'https://www.hcharger.com/evcs/E8/query_stations_info',
+        url: 'https://www.hcharger.com/evcs/E8/query_station_stats',
+        // url: 'https://www.hcharger.com/evcs/E8/query_station_status',
         type:'POST',
         headers:{
             "Content-Type": "application/json;charset=utf-8",
             "Authorization": token,
         },
-        data:JSON.stringify(obj),
+        data:JSON.stringify(objstats),
         success:function (data) {
             console.log(data);
+            console.log(JSON.parse(data))
         }
     })
-
 </script>
 
 
