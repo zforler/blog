@@ -60,8 +60,11 @@ class Comment{
             //回复按钮
             }else if('hf' === type){
                 targetElementObj.style.display = 'flex';
-                selector(textarea).focus();
-                let reviewId = dataset.reviewid;
+                let ta = selector(textarea);
+                    ta.focus();
+                let reviewId = dataset.reviewid,
+                    to = dataset.to;
+                ta.innerText = `回复 ${to} :`;
                 console.log(reviewId);
             //我也说一句
             }else if('wysyj' === type){

@@ -34,19 +34,19 @@
 
     let objStatus = {
         OperatorID:'751147003',
-        Data: '+x+kfT/aLIgbNUKBRPCkuq+1gYd4eWI/Zt1tumKFoBuMqbM1za+JLzGx79DAkOM/OHitDEExEAKiH2l1c3er9VYO6scqLyJ/p0QX9boLKtA=',
+        Data: 'NaK0PRfzxI5gvgkuRUHwTS+adB/DmidkKkV2qnJra/Q=',
         TimeStamp:"1234",
         Seq:"1234",
-        Sig:"53A8699DE4940625A3A2BD9E5C57FDFA"
+        Sig:"1C58591402302EB71AC4909C2FC036BE"
     };
     let objstats = {
         OperatorID:'751147003',
-        Data: '+x+kfT/aLIgbNUKBRPCkuq+1gYd4eWI/Zt1tumKFoBuMqbM1za+JLzGx79DAkOM/OHitDEExEAKiH2l1c3er9VYO6scqLyJ/p0QX9boLKtA=',
+        Data: 'AuGDt1chzVqpndR60xSmdZafwpnap/D0MJ67slnFQUkqGF0GByTNle80BCwgnV/IK0/z04yDQbSuqujb2tXBQ3XS3lLfqERNiExm/+0gvq0=',
         TimeStamp:"1234",
         Seq:"1234",
-        Sig:"53A8699DE4940625A3A2BD9E5C57FDFA"
+        Sig:"C00F7CE953BFA7A0DB66D3C038EBE78F"
     };
-    let token = 'BEARER261724c2cd7c46f8925d5f1f105fd4af000000000198';
+    let token = 'BEARER3168f1cf5c18448ab7ee3c7613a4119e000000000200';
 
     let objInfo = {
         OperatorID:'751147003',
@@ -66,19 +66,23 @@
     $.ajax({
         // url: 'https://www.hcharger.com/evcs/E8/query_token',
         // url: 'https://www.hcharger.com/evcs/E8/query_stations_info',
-        url: 'https://www.hcharger.com/evcs/E8/query_station_stats',
-        // url: 'https://www.hcharger.com/evcs/E8/query_station_status',
+        // url: 'http://localhost:8080/evcs/E8/query_station_stats',
+        url: 'https://www.hcharger.com/evcs/E8/query_station_status',
         type:'POST',
         headers:{
             "Content-Type": "application/json;charset=utf-8",
             "Authorization": token,
         },
-        data:JSON.stringify(objstats),
+        data:JSON.stringify(objStatus),
         success:function (data) {
             console.log(data);
             console.log(JSON.parse(data))
         }
     })
+
+
+    let str = '{"StationStats":{"EndTime":"2017-02-12","StationElectricity":0.0,"StartTime":"2017-01-10","EquipmentStatsInfos":[{"ConnectorStatsInfos":[{"ConnectorElectricity":0.0,"ConnectorID":"E801010100"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010101"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010102"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010103"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010104"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010105"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010106"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010107"}],"EquipmentID":"E8010101","EquipmentElectricity":0.0},{"ConnectorStatsInfos":[{"ConnectorElectricity":0.0,"ConnectorID":"E801010200"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010201"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010202"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010203"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010204"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010205"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010206"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010207"}],"EquipmentID":"E8010102","EquipmentElectricity":0.0},{"ConnectorStatsInfos":[{"ConnectorElectricity":0.0,"ConnectorID":"E801010300"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010301"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010302"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010303"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010304"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010305"}],"EquipmentID":"E8010103","EquipmentElectricity":0.0},{"ConnectorStatsInfos":[{"ConnectorElectricity":0.0,"ConnectorID":"E801010400"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010401"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010402"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010403"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010404"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010405"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010406"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010407"}],"EquipmentID":"E8010104","EquipmentElectricity":0.0},{"ConnectorStatsInfos":[{"ConnectorElectricity":0.0,"ConnectorID":"E801010500"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010501"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010502"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010503"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010504"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010505"}],"EquipmentID":"E8010105","EquipmentElectricity":0.0},{"ConnectorStatsInfos":[{"ConnectorElectricity":0.0,"ConnectorID":"E801010600"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010601"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010602"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010603"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010604"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010605"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010606"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010607"}],"EquipmentID":"E8010106","EquipmentElectricity":0.0},{"ConnectorStatsInfos":[{"ConnectorElectricity":0.0,"ConnectorID":"E801010700"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010701"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010702"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010703"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010704"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010705"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010706"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010707"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010708"},{"ConnectorElectricity":0.0,"ConnectorID":"E801010709"}],"EquipmentID":"E8010107","EquipmentElectricity":0.0}],"StationID":"E80101"}}'
+    console.log(JSON.parse(str))
 </script>
 
 
