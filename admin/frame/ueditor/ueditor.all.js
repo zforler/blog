@@ -8076,35 +8076,38 @@ UE.Editor.defaultOptions = function(editor){
     UE.Editor.prototype.loadServerConfig = function(){
         var me = this;
         setTimeout(function(){
-            try{
-                me.options.imageUrl && me.setOpt('serverUrl', me.options.imageUrl.replace(/^(.*[\/]).+([\.].+)$/, '$1controller$2'));
-
-                var configUrl = me.getActionUrl('config'),
-                    isJsonp = utils.isCrossDomainUrl(configUrl);
-
-                /* 发出ajax请求 */
-                me._serverConfigLoaded = false;
-
-                configUrl && UE.ajax.request(configUrl,{
-                    'method': 'GET',
-                    'dataType': isJsonp ? 'jsonp':'',
-                    'onsuccess':function(r){
-                        try {
-                            var config = isJsonp ? r:eval("("+r.responseText+")");
-                            utils.extend(me.options, config);
-                            me.fireEvent('serverConfigLoaded');
-                            me._serverConfigLoaded = true;
-                        } catch (e) {
-                            showErrorMsg(me.getLang('loadconfigFormatError'));
-                        }
-                    },
-                    'onerror':function(){
-                        showErrorMsg(me.getLang('loadconfigHttpError'));
-                    }
-                });
-            } catch(e){
-                showErrorMsg(me.getLang('loadconfigError'));
-            }
+            utils.extend(me.options, IMGCONFIG);
+            me.fireEvent('serverConfigLoaded');
+            me._serverConfigLoaded = true;
+            // try{
+            //     me.options.imageUrl && me.setOpt('serverUrl', me.options.imageUrl.replace(/^(.*[\/]).+([\.].+)$/, '$1controller$2'));
+            //
+            //     var configUrl = me.getActionUrl('config'),
+            //         isJsonp = utils.isCrossDomainUrl(configUrl);
+            //
+            //     /* 发出ajax请求 */
+            //     me._serverConfigLoaded = false;
+            //
+            //     configUrl && UE.ajax.request(configUrl,{
+            //         'method': 'GET',
+            //         'dataType': isJsonp ? 'jsonp':'',
+            //         'onsuccess':function(r){
+            //             try {
+            //                 var config = isJsonp ? r:eval("("+r.responseText+")");
+            //                 utils.extend(me.options, config);
+            //                 me.fireEvent('serverConfigLoaded');
+            //                 me._serverConfigLoaded = true;
+            //             } catch (e) {
+            //                 showErrorMsg(me.getLang('loadconfigFormatError'));
+            //             }
+            //         },
+            //         'onerror':function(){
+            //             showErrorMsg(me.getLang('loadconfigHttpError'));
+            //         }
+            //     });
+            // } catch(e){
+            //     showErrorMsg(me.getLang('loadconfigError'));
+            // }
         });
 
         function showErrorMsg(msg) {
@@ -23211,7 +23214,7 @@ UE.plugins['catchremoteimage'] = function () {
             catcherActionUrl = me.getActionUrl(me.getOpt('catcherActionName')),
             catcherUrlPrefix = me.getOpt('catcherUrlPrefix'),
             catcherFieldName = me.getOpt('catcherFieldName');
-
+        console.log(catcherLocalDomain,catcherUrlPrefix)
         var remoteImages = [],
             imgs = domUtils.getElementsByTagName(me.document, "img"),
             test = function (src, urls) {
@@ -23356,6 +23359,7 @@ UE.plugin.register('snapscreen', function (){
                     }
 
                     function onSuccess(rs){
+                        console.log(123)
                         try{
                             rs = eval("("+ rs +")");
                             if(rs.state == 'SUCCESS'){
@@ -24531,6 +24535,7 @@ UE.plugin.register('simpleupload', function (){
                             result = body.innerText || body.textContent || '';
                         json = (new Function("return " + result))();
                         link = me.options.imageUrlPrefix + json.url;
+
                         if(json.state == 'SUCCESS' && json.url) {
                             loader = me.document.getElementById(loadingId);
                             loader.setAttribute('src', link);

@@ -30,7 +30,8 @@
         UEDITOR_HOME_URL: URL
         // 服务器统一请求接口路径
         // , serverUrl: URL + "jsp/controller.jsp"
-        , serverUrl: URL + "jsp/config.json"
+        // , serverUrl: URL.replace('admin/frame/ueditor/','') + "config"
+        , serverUrl:  "http://localhost/config"
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
         , toolbars: [[
             'fullscreen', 'source', '|', 'undo', 'redo', '|',
@@ -494,3 +495,72 @@
     };
 
 })();
+
+
+let IMGCONFIG = {
+    "imageUrl": "http://localhost/ueditor/php/controller.php?action=uploadimage",
+    "imagePath": "picture",
+    "imageActionName": "uploadimage",
+    "imageFieldName": "upfile",
+    "imageMaxSize": 2048000,
+    "imageAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"],
+    "imageCompressEnable": true,
+    "imageCompressBorder": 1600,
+    "imageInsertAlign": "none",
+    "imageUrlPrefix": "",
+    "imagePathFormat":"/picture",
+    "scrawlActionName": "uploadscrawl",
+    "scrawlFieldName": "upfile",
+    "scrawlPathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "scrawlMaxSize": 2048000,
+    "scrawlUrlPrefix": "",
+    "scrawlInsertAlign": "none",
+    "snapscreenActionName": "uploadimage",
+    "snapscreenPathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "snapscreenUrlPrefix": "",
+    "snapscreenInsertAlign": "none",
+    "catcherLocalDomain": ["127.0.0.1", "localhost", "img.baidu.com"],
+    "catcherActionName": "catchimage",
+    "catcherFieldName": "source",
+    "catcherPathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "catcherUrlPrefix": "",
+    "catcherMaxSize": 2048000,
+    "catcherAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"],
+    "videoActionName": "uploadvideo",
+    "videoFieldName": "upfile",
+    "videoPathFormat": "/ueditor/jsp/upload/video/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "videoUrlPrefix": "",
+    "videoMaxSize": 102400000,
+    "videoAllowFiles": [
+        ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
+        ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid"],
+    "fileActionName": "uploadfile",
+    "fileFieldName": "upfile",
+    "filePathFormat": "/ueditor/jsp/upload/file/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "fileUrlPrefix": "",
+    "fileMaxSize": 51200000,
+    "fileAllowFiles": [
+        ".png", ".jpg", ".jpeg", ".gif", ".bmp",
+        ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
+        ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid",
+        ".rar", ".zip", ".tar", ".gz", ".7z", ".bz2", ".cab", ".iso",
+        ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".txt", ".md", ".xml"
+    ],
+    "imageManagerActionName": "listimage",
+    "imageManagerListPath": "/ueditor/jsp/upload/image/",
+    "imageManagerListSize": 20,
+    "imageManagerUrlPrefix": "",
+    "imageManagerInsertAlign": "none",
+    "imageManagerAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"],
+
+    "fileManagerActionName": "listfile",
+    "fileManagerListPath": "/ueditor/jsp/upload/file/",
+    "fileManagerUrlPrefix": "",
+    "fileManagerListSize": 20,
+    "fileManagerAllowFiles": [
+        ".png", ".jpg", ".jpeg", ".gif", ".bmp",
+        ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
+        ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid",
+        ".rar", ".zip", ".tar", ".gz", ".7z", ".bz2", ".cab", ".iso",
+        ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".txt", ".md", ".xml"
+    ]};
